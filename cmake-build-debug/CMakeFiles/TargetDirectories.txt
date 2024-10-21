@@ -1,0 +1,6 @@
+/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/CMakeFiles/ServerExecutable.dir
+/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/CMakeFiles/UserExecutable.dir
+/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/_deps/json-build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/_deps/json-build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="BankMasterv3"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\_deps\;CMake Files\cmake-build-debug\_deps\json-src\;CMake Files\cmake-build-debug\_deps\json-src\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ServerExecutable">
+				<Option output="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/ServerExecutable" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cpp-httplib"/>
+					<Add directory="/mnt/c/Users/andre/CLionProjects/BankMasterv3/json"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 ServerExecutable"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ServerExecutable/fast">
+				<Option output="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/ServerExecutable" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cpp-httplib"/>
+					<Add directory="/mnt/c/Users/andre/CLionProjects/BankMasterv3/json"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 ServerExecutable/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UserExecutable">
+				<Option output="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/UserExecutable" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cpp-httplib"/>
+					<Add directory="/mnt/c/Users/andre/CLionProjects/BankMasterv3/json"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 UserExecutable"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UserExecutable/fast">
+				<Option output="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/UserExecutable" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cpp-httplib"/>
+					<Add directory="/mnt/c/Users/andre/CLionProjects/BankMasterv3/json"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 UserExecutable/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/c/Users/andre/CLionProjects/BankMasterv3/Server.cpp">
+			<Option target="ServerExecutable"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/andre/CLionProjects/BankMasterv3/User.cpp">
+			<Option target="UserExecutable"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/andre/CLionProjects/BankMasterv3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/_deps/json-src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cmake-build-debug\_deps\json-src\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/_deps/json-src/cmake/config.cmake.in">
+			<Option virtualFolder="CMake Files\cmake-build-debug\_deps\json-src\cmake\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/_deps/json-src/cmake/nlohmann_jsonConfigVersion.cmake.in">
+			<Option virtualFolder="CMake Files\cmake-build-debug\_deps\json-src\cmake\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/_deps/json-src/cmake/pkg-config.pc.in">
+			<Option virtualFolder="CMake Files\cmake-build-debug\_deps\json-src\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

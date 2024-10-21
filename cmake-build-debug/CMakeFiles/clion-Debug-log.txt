@@ -1,0 +1,49 @@
+C:\WINDOWS\system32\wsl.exe --distribution Ubuntu --exec /bin/bash -c "export CMAKE_COLOR_DIAGNOSTICS=ON && export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' -S /mnt/c/Users/andre/CLionProjects/BankMasterv3 -B /mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug; exitcode=$?; sleep 0.001; (exit $exitcode)"
+CMake Deprecation Warning:
+  Support for "Extra Generators" like
+
+    CodeBlocks
+
+  is deprecated and will be removed from a future version of CMake.  IDEs may
+  use the cmake-file-api(7) to view CMake-generated project build trees.
+
+
+-- [download 1% complete]
+-- [download 2% complete]
+-- [download 5% complete]
+-- [download 7% complete]
+-- [download 11% complete]
+-- [download 14% complete]
+-- [download 15% complete]
+-- [download 17% complete]
+-- [download 21% complete]
+-- [download 27% complete]
+-- [download 31% complete]
+-- [download 32% complete]
+-- [download 36% complete]
+-- [download 38% complete]
+-- [download 41% complete]
+-- [download 45% complete]
+-- [download 46% complete]
+-- [download 48% complete]
+-- [download 51% complete]
+-- [download 56% complete]
+-- [download 58% complete]
+-- [download 59% complete]
+-- [download 66% complete]
+-- [download 71% complete]
+-- [download 74% complete]
+-- [download 76% complete]
+-- [download 79% complete]
+-- [download 81% complete]
+-- [download 86% complete]
+-- [download 90% complete]
+-- [download 91% complete]
+-- [download 94% complete]
+-- [download 96% complete]
+-- [download 99% complete]
+-- [download 100% complete]
+-- Using the multi-header code from /mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug/_deps/json-src/include/
+-- Configuring done (6.1s)
+-- Generating done (0.4s)
+-- Build files have been written to: /mnt/c/Users/andre/CLionProjects/BankMasterv3/cmake-build-debug

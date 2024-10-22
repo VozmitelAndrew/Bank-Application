@@ -7,6 +7,10 @@
 #include <unistd.h>     // Для функции close()
 #include <sstream>
 
+//#include "Comands.cpp"
+
+#define dbg(obj) (std::cout << (obj) << std::endl)
+
 class Database {
     std::map<std::string, double> accounts; // Карта с балансами пользователей
     std::mutex db_mutex; // Мьютекс для синхронизации доступа к базе данных
@@ -42,12 +46,15 @@ public:
     }
 };
 
+
 // Обработка клиента
 void handleClient(int clientSocket, Database& db) {
     char buffer[1024] = {0}; // Буфер для приёма данных
     read(clientSocket, buffer, 1024); // Чтение данных из сокета
 
     std::string request(buffer); // Преобразуем буфер в строку
+
+    //dbg(request);
 
     // Разделитель между заголовками HTTP и телом запроса
     std::string delimiter = "\r\n\r\n";
@@ -64,16 +71,21 @@ void handleClient(int clientSocket, Database& db) {
 
         ss >> command; // Чтение команды
 
+        //dbg(command);
+
         // Обработка команд
         if (command == "register") {
             ss >> username;
             db.registerUser(username); // Регистрация пользователя
+            response = "you have registered!";
         } else if (command == "deposit") {
             ss >> username >> amount;
             db.deposit(username, amount); // Депозит на счёт пользователя
+            response = "you have deposit!";
         } else if (command == "withdraw") {
             ss >> username >> amount;
             db.withdraw(username, amount); // Снятие со счёта
+            response = "you have withdraw!";
         } else {
             std::cout << "Unknown command: " << command << std::endl;
             response = "Unknown command: " + command; // Неизвестная команда
@@ -141,58 +153,8 @@ int main() {
             exit(EXIT_FAILURE);
         }
 
-        // Запуск нового потока для обработки каждого клиента
+
         std::thread clientThread(handleClient, new_socket, std::ref(db));
-        clientThread.detach(); // Поток отделяется и работает независимо
-    }
-}
-
-int main() {
-    int server_fd, new_socket;
-    struct sockaddr_in address;
-    int opt = 1;
-    int addrlen = sizeof(address);
-
-    Database db; // Создаём объект базы данных
-
-    // Создание сокета
-    if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
-        perror("Socket failed");
-        exit(EXIT_FAILURE);
-    }
-
-    // Настройка сокета (повторное использование адресов и портов)
-    if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))) {
-        perror("Setsockopt failed");
-        exit(EXIT_FAILURE);
-    }
-    address.sin_family = AF_INET;
-    address.sin_addr.s_addr = INADDR_ANY; // Принимаем соединения на любой IP
-    address.sin_port = htons(8080); // Порт 8080
-
-    // Привязка сокета к адресу и порту
-    if (bind(server_fd, (struct sockaddr*)&address, sizeof(address)) < 0) {
-        perror("Bind failed");
-        exit(EXIT_FAILURE);
-    }
-
-    // Настройка слушателя (максимум 3 соединения в очереди)
-    if (listen(server_fd, 3) < 0) {
-        perror("Listen failed");
-        exit(EXIT_FAILURE);
-    }
-
-    std::cout << "Server started on port 8080!" << std::endl;
-
-    // Главный цикл для обработки клиентов
-    while (true) {
-        if ((new_socket = accept(server_fd, (struct sockaddr*)&address, (socklen_t*)&addrlen)) < 0) {
-            perror("Accept failed");
-            exit(EXIT_FAILURE);
-        }
-
-        // Запуск нового потока для обработки каждого клиента
-        std::thread clientThread(handleClient, new_socket, std::ref(db));
-        clientThread.detach(); // Поток отделяется и работает независимо
+        clientThread.detach();
     }
 }

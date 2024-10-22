@@ -218,6 +218,7 @@ CMakeFiles/ServerExecutable.dir/Server.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc \
  /mnt/c/Users/andre/CLionProjects/BankMasterv3/Comands.cpp \
+ /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
  /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
  /usr/include/c++/11/bits/hashtable_policy.h \
  /usr/include/c++/11/bits/enable_special_members.h \
@@ -225,5 +226,4 @@ CMakeFiles/ServerExecutable.dir/Server.cpp.o: \
  /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/functional \
- /usr/include/c++/11/bits/std_function.h
+ /usr/include/c++/11/bits/vector.tcc

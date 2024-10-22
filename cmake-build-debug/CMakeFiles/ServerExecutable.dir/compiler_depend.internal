@@ -3,6 +3,7 @@
 
 CMakeFiles/ServerExecutable.dir/Server.cpp.o
  /mnt/c/Users/andre/CLionProjects/BankMasterv3/Server.cpp
+ /mnt/c/Users/andre/CLionProjects/BankMasterv3/Comands.cpp
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h
  /usr/include/asm-generic/errno-base.h
@@ -30,6 +31,7 @@ CMakeFiles/ServerExecutable.dir/Server.cpp.o
  /usr/include/c++/11/bits/cpp_type_traits.h
  /usr/include/c++/11/bits/cxxabi_forced.h
  /usr/include/c++/11/bits/cxxabi_init_exception.h
+ /usr/include/c++/11/bits/enable_special_members.h
  /usr/include/c++/11/bits/erase_if.h
  /usr/include/c++/11/bits/exception.h
  /usr/include/c++/11/bits/exception_defines.h
@@ -37,6 +39,8 @@ CMakeFiles/ServerExecutable.dir/Server.cpp.o
  /usr/include/c++/11/bits/functexcept.h
  /usr/include/c++/11/bits/functional_hash.h
  /usr/include/c++/11/bits/hash_bytes.h
+ /usr/include/c++/11/bits/hashtable.h
+ /usr/include/c++/11/bits/hashtable_policy.h
  /usr/include/c++/11/bits/invoke.h
  /usr/include/c++/11/bits/ios_base.h
  /usr/include/c++/11/bits/istream.tcc
@@ -64,10 +68,12 @@ CMakeFiles/ServerExecutable.dir/Server.cpp.o
  /usr/include/c++/11/bits/semaphore_base.h
  /usr/include/c++/11/bits/sstream.tcc
  /usr/include/c++/11/bits/std_abs.h
+ /usr/include/c++/11/bits/std_function.h
  /usr/include/c++/11/bits/std_mutex.h
  /usr/include/c++/11/bits/std_thread.h
  /usr/include/c++/11/bits/stl_algo.h
  /usr/include/c++/11/bits/stl_algobase.h
+ /usr/include/c++/11/bits/stl_bvector.h
  /usr/include/c++/11/bits/stl_construct.h
  /usr/include/c++/11/bits/stl_function.h
  /usr/include/c++/11/bits/stl_heap.h
@@ -80,6 +86,8 @@ CMakeFiles/ServerExecutable.dir/Server.cpp.o
  /usr/include/c++/11/bits/stl_relops.h
  /usr/include/c++/11/bits/stl_tempbuf.h
  /usr/include/c++/11/bits/stl_tree.h
+ /usr/include/c++/11/bits/stl_uninitialized.h
+ /usr/include/c++/11/bits/stl_vector.h
  /usr/include/c++/11/bits/streambuf.tcc
  /usr/include/c++/11/bits/streambuf_iterator.h
  /usr/include/c++/11/bits/string_view.tcc
@@ -88,7 +96,9 @@ CMakeFiles/ServerExecutable.dir/Server.cpp.o
  /usr/include/c++/11/bits/uniform_int_dist.h
  /usr/include/c++/11/bits/unique_lock.h
  /usr/include/c++/11/bits/unique_ptr.h
+ /usr/include/c++/11/bits/unordered_map.h
  /usr/include/c++/11/bits/uses_allocator.h
+ /usr/include/c++/11/bits/vector.tcc
  /usr/include/c++/11/cctype
  /usr/include/c++/11/cerrno
  /usr/include/c++/11/chrono
@@ -112,6 +122,7 @@ CMakeFiles/ServerExecutable.dir/Server.cpp.o
  /usr/include/c++/11/ext/numeric_traits.h
  /usr/include/c++/11/ext/string_conversions.h
  /usr/include/c++/11/ext/type_traits.h
+ /usr/include/c++/11/functional
  /usr/include/c++/11/initializer_list
  /usr/include/c++/11/ios
  /usr/include/c++/11/iosfwd
@@ -137,7 +148,9 @@ CMakeFiles/ServerExecutable.dir/Server.cpp.o
  /usr/include/c++/11/tuple
  /usr/include/c++/11/type_traits
  /usr/include/c++/11/typeinfo
+ /usr/include/c++/11/unordered_map
  /usr/include/c++/11/utility
+ /usr/include/c++/11/vector
  /usr/include/ctype.h
  /usr/include/endian.h
  /usr/include/errno.h

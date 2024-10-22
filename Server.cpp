@@ -7,44 +7,38 @@
 #include <unistd.h>     // Для функции close()
 #include <sstream>
 
-//#include "Comands.cpp"
+#include "Comands.cpp"
 
 #define dbg(obj) (std::cout << (obj) << std::endl)
 
-class Database {
-    std::map<std::string, double> accounts; // Карта с балансами пользователей
-    std::mutex db_mutex; // Мьютекс для синхронизации доступа к базе данных
-
-public:
-    // Регистрация нового пользователя
-    void registerUser(const std::string& username) {
-        std::lock_guard<std::mutex> lock(db_mutex); // Автоматическая блокировка мьютекса
-        if (accounts.find(username) == accounts.end()) {
-            accounts[username] = 0.0; // Инициализируем баланс
-            std::cout << "User " << username << " registered." << std::endl;
-        } else {
-            std::cout << "User " << username << " already exists!" << std::endl;
-        }
+void Database::registerUser(const std::string& username) {
+    std::lock_guard<std::mutex> lock(db_mutex); // Автоматическая блокировка мьютекса
+    if (accounts.find(username) == accounts.end()) {
+        accounts[username] = 0.0; // Инициализируем баланс
+        std::cout << "User " << username << " registered." << std::endl;
+    } else {
+        std::cout << "User " << username << " already exists!" << std::endl;
     }
+}
 
-    // Добавление средств
-    void deposit(const std::string& username, double amount) {
-        std::lock_guard<std::mutex> lock(db_mutex);
-        accounts[username] += amount;
-        std::cout << "Deposited " << amount << " to " << username << ". Current balance: " << accounts[username] << std::endl;
-    }
+// Добавление средств
+void Database::deposit(const std::string& username, double amount) {
+    std::lock_guard<std::mutex> lock(db_mutex);
+    accounts[username] += amount;
+    std::cout << "Deposited " << amount << " to " << username << ". Current balance: " << accounts[username] << std::endl;
+}
 
-    // Снятие средств
-    void withdraw(const std::string& username, double amount) {
-        std::lock_guard<std::mutex> lock(db_mutex);
-        if (accounts[username] >= amount) {
-            accounts[username] -= amount;
-            std::cout << "Withdrawn " << amount << " from " << username << ". Current balance: " << accounts[username] << std::endl;
-        } else {
-            std::cout << "Insufficient funds for " << username << "." << std::endl;
-        }
+// Снятие средств
+void Database::withdraw(const std::string& username, double amount) {
+    std::lock_guard<std::mutex> lock(db_mutex);
+    if (accounts[username] >= amount) {
+        accounts[username] -= amount;
+        std::cout << "Withdrawn " << amount << " from " << username << ". Current balance: " << accounts[username] << std::endl;
+    } else {
+        std::cout << "Insufficient funds for " << username << "." << std::endl;
     }
-};
+}
+
 
 
 // Обработка клиента
@@ -70,26 +64,14 @@ void handleClient(int clientSocket, Database& db) {
         double amount;
 
         ss >> command; // Чтение команды
-
-        //dbg(command);
-
-        // Обработка команд
-        if (command == "register") {
-            ss >> username;
-            db.registerUser(username); // Регистрация пользователя
-            response = "you have registered!";
-        } else if (command == "deposit") {
-            ss >> username >> amount;
-            db.deposit(username, amount); // Депозит на счёт пользователя
-            response = "you have deposit!";
-        } else if (command == "withdraw") {
-            ss >> username >> amount;
-            db.withdraw(username, amount); // Снятие со счёта
-            response = "you have withdraw!";
+        CommandDispatcher cmd = CommandDispatcher(db);
+        if (cmd.handleCommand(command, ss, response)) {
+            std::cout << response << std::endl;
         } else {
-            std::cout << "Unknown command: " << command << std::endl;
-            response = "Unknown command: " + command; // Неизвестная команда
+            std::cout << "did not finish fully" << std::endl;
+            std::cout << response << std::endl;
         }
+        //
     } else {
         std::cout << "Malformed HTTP request" << std::endl;
         response = "Malformed HTTP request"; // Некорректный запрос
